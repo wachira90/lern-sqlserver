@@ -1,6 +1,17 @@
-# shrink log
+# Shrink log
 
-## command
+
+## Shrink the log using TSQL
+
+If the database is in the SIMPLE recovery model you can use the following statement to shrink the log file:
+
+````
+DBCC SHRINKFILE (AdventureWorks_log, 1)
+````
+
+## Command
+
+If the database is in the FULL recovery model you can change the following 
 
 ````
 ALTER DATABASE AdventureWorks
