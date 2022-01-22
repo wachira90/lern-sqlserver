@@ -22,3 +22,13 @@ GO
 ALTER DATABASE AdventureWorks
 SET RECOVERY FULL
 ````
+
+## You can find the logical name of the log file by using the following query:
+````
+SELECT name FROM sys.master_files WHERE type_desc = 'LOG'
+````
+
+Another option to shrink the log using the FULL recovery model is to backup the log for your database using the BACKUP LOG statement and then issue the SHRINKFILE command to shrink the transaction log:
+````
+BACKUP LOG AdventureWorks TO BackupDevice
+````
