@@ -1,0 +1,2 @@
+# lern-sqlserver
+lerning sqlserver
