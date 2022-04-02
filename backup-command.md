@@ -119,3 +119,4 @@ WITH FORMAT, STATS, PASSWORD = 'Q!W@E#R$'
 GO
 ````
 
+From : https://www.mssqltips.com/sqlservertutorial/20/sql-server-backup-database-command/
