@@ -1,7 +1,8 @@
--- BASELINE 
+# show last login
 
 -- 1. ====================creation history tables=================
 
+````
 IF (OBJECT_ID('dbo.LoginHistory') IS NULL) BEGIN
 CREATE TABLE dbo.LoginHistory (
     Username VARCHAR(128) COLLATE SQL_Latin1_General_CP1_CI_AI NOT NULL,
@@ -22,10 +23,10 @@ CREATE TABLE dbo.LastLogin (
     )
 )
 END 
-
+````
 -- 2. =================Creation Trigger=======================
 
-
+````
 CREATE TRIGGER [trgAudit_LoginHistory] ON ALL SERVER -- Para evitar problemas de permissão no insert na tabela
     WITH EXECUTE AS 'sa' FOR LOGON AS BEGIN
 SET NOCOUNT ON -- Não loga conexões de usuários de sistema
@@ -52,14 +53,16 @@ SELECT ORIGINAL_LOGIN(),
     GETDATE(),
     PROGRAM_NAME()
 END
-
+````
 
 -- 3. ===========enable trigger===================
 
+````
 ENABLE TRIGGER [trgAudit_LoginHistory] ON ALL SERVER
+````
 
 -- 4. ===========Generates show last login===================
-
+````
 IF (OBJECT_ID('tempdb..#UltimoLogin') IS NOT NULL) DROP TABLE #UltimoLogin
 CREATE TABLE #UltimoLogin (
 [User] VARCHAR(128) COLLATE SQL_Latin1_General_CP1_CI_AI NOT NULL,
@@ -87,4 +90,4 @@ FROM dbo.LastLogin A
 WHERE ISNULL(A.LastLogin, '1900-01-01') <> B.LogDate
 SELECT *
 FROM dbo.LastLogin
-
+````
