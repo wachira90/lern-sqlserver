@@ -7,7 +7,7 @@ EXEC sp_dropserver 'oldservername';
 GO
 ````
 
-## ADD NEW NAME AND RESTART SERVICE
+## ADD NEW NAME
 ````
 EXEC sp_addserver 'newservername', local;  
 GO  
@@ -15,3 +15,5 @@ GO
 EXEC sp_addserver 'SQL2019', local;  
 GO 
 ````
+
+## RESTART SERVICE SQLSERVER
