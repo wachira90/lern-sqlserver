@@ -1,5 +1,10 @@
 # DROP NAME INTANCES
 
+## CHECK OLD SERVER NAME
+````
+SELECT @@SERVERNAME AS 'Server Name';  
+````
+
 ## DELETE OLD NAME 
 
 ````
