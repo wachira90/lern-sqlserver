@@ -22,3 +22,16 @@ GO
 ````
 
 ## RESTART SERVICE SQLSERVER
+
+### ADDITION COMMAND
+````
+EXEC sp_dropserver '<old_name>';  
+GO  
+EXEC sp_addserver '<new_name>', local;  
+GO  
+
+EXEC sp_dropserver '<old_name\instancename>';  
+GO  
+EXEC sp_addserver '<new_name\instancename>', local;  
+GO
+````
