@@ -64,3 +64,10 @@ BEGIN
 END
 
 ````
+
+## result 
+
+````
+Logical CPU count 4
+Needed 4 TempDB data files, now there is 4
+````
