@@ -1,8 +1,8 @@
 # COPY SCHEMA TABLE
 
-
-### SELECT * INTO DestinationTableName FROM SourceTableName
-
+````  
+SELECT * INTO DestinationTableName FROM SourceTableName
+````  
 
 ## Copy structure only (copy all the columns)
 ````  
