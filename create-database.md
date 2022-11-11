@@ -24,5 +24,7 @@ GO
 ## CHECK CURRENT COLLATE
 
 ````
+USE [sqltestdb]
+GO
 SELECT name, collation_name FROM sys.databases WHERE name = 'sqltestdb';
 ````
