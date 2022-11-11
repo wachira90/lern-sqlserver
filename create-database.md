@@ -28,3 +28,10 @@ USE [sqltestdb]
 GO
 SELECT name, collation_name FROM sys.databases WHERE name = 'sqltestdb';
 ````
+
+## CHECK CURRENT FILE PATH
+
+````
+SELECT name as [Logical_name], physical_name as [physical file name] FROM sys.database_files
+
+````
