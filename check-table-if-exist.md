@@ -1,5 +1,6 @@
 # CHECK TABLE IF EXIST
 
+## BY SCHEMA
 
 ````
 USE [testdb]
@@ -13,3 +14,18 @@ ELSE
       PRINT 'No Table in database'
    END;
 ````   
+
+## Using OBJECT_ID() function
+
+````
+USE [testdb]
+GO
+IF OBJECT_ID('model.dbo.DestinationTableName') IS NOT NULL
+   BEGIN
+      PRINT 'Database Table Exists'
+   END;
+ELSE
+   BEGIN
+      PRINT 'No Table in database'
+   END;
+````
