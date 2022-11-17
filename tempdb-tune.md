@@ -1,8 +1,11 @@
-# tempdb tune
+# TEMPDB TUNE
 
 Change the variable @check to 1 to implement the change. The default value 0 only shows the information
 
 ````
+USE [master]
+GO
+
 DECLARE @check BIT
  
 SET @check = 0 --For information set 0, for change 1
@@ -65,7 +68,7 @@ END
 
 ````
 
-## result 
+## RESULT 
 
 ````
 Logical CPU count 4
