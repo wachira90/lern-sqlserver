@@ -10,6 +10,9 @@ GO
 ## run by
 
 ```sql
+USE [AnalyticsDB]
+GO
+
 ALTER DATABASE [AnalyticsDB] SET EMERGENCY;
 GO
 
