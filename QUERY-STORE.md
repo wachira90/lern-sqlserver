@@ -1,0 +1,21 @@
+# QUERY STORE
+
+## ENABLE
+
+```sql
+USE [master]
+GO
+ALTER DATABASE [amsprod] SET QUERY_STORE = ON
+GO
+ALTER DATABASE [amsprod] SET QUERY_STORE (OPERATION_MODE = READ_WRITE)
+GO
+```
+
+## DISABLE
+
+```sql
+USE [master]
+GO
+ALTER DATABASE [amsprod] SET QUERY_STORE = OFF
+GO
+```
