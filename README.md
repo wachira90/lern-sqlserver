@@ -16,6 +16,18 @@ ALTER DATABASE AdventureWorks SET RECOVERY FULL
 GO
 ```
 
+## DELAY
+
+```sql
+-- Delay the process by 20 seconds:
+WAITFOR DELAY '00:00:20';
+GO
+ 
+-- Delay the process until 6:15 PM
+WAITFOR TIME '18:15:00';
+GO
+```
+
 ## Growth 1MB
 
 ```sql
