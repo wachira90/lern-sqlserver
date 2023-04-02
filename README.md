@@ -16,6 +16,17 @@ ALTER DATABASE AdventureWorks SET RECOVERY FULL
 GO
 ```
 
+## enable query store
+
+```sql
+USE [master]
+GO
+ALTER DATABASE [datbase_xxxx] SET QUERY_STORE = ON
+GO
+ALTER DATABASE [datbase_xxxx] SET QUERY_STORE (OPERATION_MODE = READ_WRITE)
+GO
+```
+
 ## create user
 
 ```sql
