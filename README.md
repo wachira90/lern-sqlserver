@@ -16,6 +16,23 @@ ALTER DATABASE AdventureWorks SET RECOVERY FULL
 GO
 ```
 
+## create user
+
+```sql
+USE [master]
+GO
+CREATE LOGIN [userxxx] WITH PASSWORD=N'pass123456', DEFAULT_DATABASE=[master], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+GO
+ALTER SERVER ROLE [diskadmin] ADD MEMBER [userxxx]
+GO
+ALTER SERVER ROLE [processadmin] ADD MEMBER [userxxx]
+GO
+ALTER SERVER ROLE [securityadmin] ADD MEMBER [userxxx]
+GO
+ALTER SERVER ROLE [serveradmin] ADD MEMBER [userxxx]
+GO
+```
+
 ## DELAY
 
 ```sql
