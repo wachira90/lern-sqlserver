@@ -70,6 +70,25 @@ and db.state_desc = 'online'
 ORDER BY s.database_id
 ```
 
+## GRANT USER usermonitor FOR MONITOR "Activity Monitor" only
+
+```sql
+USE [master]
+GO
+CREATE LOGIN [usermonitor] WITH PASSWORD=N'userpass', DEFAULT_DATABASE=[master], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+GO
+
+USE [msdb]
+GO
+CREATE USER [usermonitor] FOR LOGIN [usermonitor]
+GO
+
+USE [master]
+GO
+GRANT VIEW SERVER STATE TO usermonitor;
+GO
+```
+
 ## standard create
 
 ```sql
